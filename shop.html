@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tag -->
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+
+    <title>Groxi</title>
+
+    <!-- Google Foont -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&family=Jost:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- Bootstrap Main Css -->
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- Font Awsome Min Css -->
+
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- Search Overly Css -->
+
+    <link rel="stylesheet" href="css/overly-search-bar.css">
+
+    <!-- range -->
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+    <!-- Style Min Css -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive Min Css -->
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="abt">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 mb-lg-0 mr-a">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html" target="blank">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html" target="blank">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html" target="blank">Pages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html" target="blank">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" target="blank">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="404.html" target="blank">404</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <ul class="d-flex align-items-center fl-1">
+                            <li>
+                                <div class="search-ic">
+                                    <i id="search-btn" class="fas fa-search"></i>
+                                    <div id="search-overlay" class="block">
+                                        <div class="centered">
+                                            <div id='search-box'>
+                                                <i id="close-btn" class="fa fa-times fa-2x"></i>
+                                                <form action='/search' id='search-form' method='get' target='_top'>
+                                                    <input id='search-text' name='q' placeholder='Search' type='text' />
+                                                    <button id='search-button' type='submit'>
+                                                        <span>Search</span>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="user-ic">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cart-ic">
+                                    <button class="btn ofc" type="button" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                                            class="fas fa-shopping-cart"></i></button>
+
+                                    <div class="offcanvas offcanvas-end" aria-labelledby="offcanvasRightLabel"
+                                        tabindex="-1" id="offcanvasRight">
+                                        <div class="offcanvas-header">
+                                            <h6 class="sid-titl">Your Products</h6>
+                                            <button type="button" class="btn-close text-reset"
+                                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <div class="row align-items-center br-bt">
+                                                <div class="col-md-6">
+                                                    <img src="img/product-1.jpg" alt="">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="total">
+                                                        <p>Beef Steak</p>
+                                                        <p>1 × $45.00</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="t-title">Subtotal: <span>$45.00</span></h5>
+                                            <button type="button" class="btn btn-defult">View Cart</button>
+                                            <button type="button" class="btn btn-defult cl-gr">Checkout</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header-main-wrap">
+            <div class="container">
+                <div class="abt-text">
+                    <h2 class="header-main-t">Shop</h2>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+
+
+    <!-- Catagory -->
+
+    <section class="catagory-sect">
+        <div class="container">
+            <div class="row mr-bt align-items-center">
+                <div class="col-md-6">
+                    <div class="s-search d-flex align-items-center">
+                        <div class="main-search">
+                            <form action="#">
+                                <input class="search-11" type="search" name="Search" placeholder="Search ">
+                            </form>
+
+                            <div class="s-icon-1">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+
+                        <ul class="search-dots">
+                            <li><i class="fab fa-buromobelexperte"></i></li>
+                            <li><i class="fas fa-list-ul"></i></li>
+                            <li>Showing 1–18 of 24 results</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="opt-grp">
+                        <select name="slect" class="wid">
+                            <option value="">Default Sorting</option>
+                            <option value="">Hello World</option>
+                            <option value="">How Are You</option>
+                            <option value="">Default Sorting Zero</option>
+                            <option value="">Default Sorting One</option>
+                            <option value="">Default Sorting Two</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="catagory">
+                        <h4 class="sp-title">Categories</h4>
+                        <form action="#">
+                            <input type="checkbox" name="ckeckbox1">
+                            <label for="ckeckbox1">Beverages</label>
+                            <br>
+                            <input type="checkbox" name="ckeckbox2">
+                            <label for="ckeckbox2">Biscuits, Snacks</label>
+                            <br>
+                            <input type="checkbox" name="ckeckbox3">
+                            <label for="ckeckbox3">Breakfast & Dairy</label>
+                            <br>
+                            <input type="checkbox" name="ckeckbox4">
+                            <label for="ckeckbox4">Fruits & Vegetables</label>
+                            <br>
+                            <input type="checkbox" name="ckeckbox5">
+                            <label for="ckeckbox5">Home Needs</label>
+                            <br>
+                            <input type="checkbox" name="ckeckbox6">
+                            <label for="ckeckbox6">Grocery & Staples</label>
+                            <br>
+                            <input type="checkbox" name="ckeckbox7">
+                            <label for="ckeckbox7">Home & Kitchen</label>
+                            <br>
+                            <input type="checkbox" name="ckeckbox8">
+                            <label for="ckeckbox8">Household Needs</label>
+                            <br>
+                            <input type="checkbox" name="ckeckbox9">
+                            <label for="ckeckbox9">Meats, Frozen</label>
+                            <br>
+                            <input type="checkbox" name="ckeckbox10">
+                            <label for="ckeckbox10">Noodles, Sauces</label>
+                        </form>
+                    </div>
+
+                    <div class="F-price">
+                        <h4 class="sp-title">Filter By Price</h4>
+
+                        <p>
+                            <label for="amount">Price range:</label>
+                            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                        </p>
+
+                        <div id="slider-range"></div>
+
+                    </div>
+
+                    <div class="shop-cat-main">
+                        <h4 class="sp-title">Trending Items</h4>
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <div class="sm-img">
+                                    <img src="img/shop-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <a href="javascript:voied(0);" class="s-cat-title">Mango Juices</a>
+                                <p class="shop-price"><del>$22</del> $18</p>
+                                <ul class="d-inlin">
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star silv"></i></li>
+                                    <li><i class="fas fa-star silv"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <div class="sm-img">
+                                    <img src="img/shop-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <a href="javascript:voied(0);" class="s-cat-title">Beef Steak</a>
+                                <p class="shop-price"><del>$22</del> $18</p>
+                                <ul class="d-inlin">
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star silv"></i></li>
+                                    <li><i class="fas fa-star silv"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <div class="sm-img">
+                                    <img src="img/shop-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <a href="javascript:voied(0);" class="s-cat-title">Broccoli</a>
+                                <p class="shop-price"><del>$22</del> $18</p>
+                                <ul class="d-inlin">
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star silv"></i></li>
+                                    <li><i class="fas fa-star silv"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <div class="sm-img">
+                                    <img src="img/shop-4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <a href="javascript:voied(0);" class="s-cat-title">Strawberries</a>
+                                <p class="shop-price"><del>$22</del> $18</p>
+                                <ul class="d-inlin">
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star silv"></i></li>
+                                    <li><i class="fas fa-star silv"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <div class="sm-img">
+                                    <img src="img/shop-5.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <a href="javascript:voied(0);" class="s-cat-title">Body Lotion</a>
+                                <p class="shop-price"><del>$22</del> $18</p>
+                                <ul class="d-inlin">
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star gold"></i></li>
+                                    <li><i class="fas fa-star silv"></i></li>
+                                    <li><i class="fas fa-star silv"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="javascript:voied:(0);" class="view-btn">View more <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="more-shop-product">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="pop-card">
+                                    <img src="img/product-5.jpg" alt="">
+
+                                    <ul>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                    </ul>
+
+                                    <h4 class="pop-title">Beef Steak</h4>
+                                    <p class="pric"><del>$15</del> $12</p>
+                                    <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                                    <div class="po-card-tag-1">
+                                        <p>Hot</p>
+                                    </div>
+
+                                    <div class="pop-card-tag-2">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pop-card">
+                                    <img src="img/product-6.jpg" alt="">
+
+                                    <ul>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                    </ul>
+
+                                    <h4 class="pop-title">Broccoli</h4>
+                                    <p class="pric"><del>$20</del> $12</p>
+                                    <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                                    <div class="pop-card-tag-2">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pop-card">
+                                    <img src="img/product-4.jpg" alt="">
+
+                                    <ul>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                    </ul>
+
+                                    <h4 class="pop-title">Strawberries</h4>
+                                    <p class="pric"><del>$30</del> $20</p>
+                                    <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                                    <div class="pop-card-tag-2">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="pop-card">
+                                    <img src="img/product-4.jpg" alt="">
+
+                                    <ul>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                    </ul>
+
+                                    <h4 class="pop-title">Fresh Honey</h4>
+                                    <p class="pric"><del>$50</del> $40</p>
+                                    <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                                    <div class="pop-card-tag-2">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pop-card">
+                                    <img src="img/product-5.jpg" alt="">
+
+                                    <ul>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                    </ul>
+
+                                    <h4 class="pop-title">Fresh Milk</h4>
+                                    <p class="pric"><del>$10</del> $8</p>
+                                    <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                                    <div class="pop-card-tag-2">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pop-card">
+                                    <img src="img/product-6.jpg" alt="">
+
+                                    <ul>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                    </ul>
+
+                                    <h4 class="pop-title">Mango Beverages</h4>
+                                    <p class="pric"><del>$22</del> $18</p>
+                                    <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                                    <div class="pop-card-tag-2">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="pop-card">
+                                    <img src="img/product-5.jpg" alt="">
+
+                                    <ul>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                    </ul>
+
+                                    <h4 class="pop-title">Beef Steak</h4>
+                                    <p class="pric"><del>$15</del> $12</p>
+                                    <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                                    <div class="po-card-tag-1">
+                                        <p>Hot</p>
+                                    </div>
+
+                                    <div class="pop-card-tag-2">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pop-card">
+                                    <img src="img/product-6.jpg" alt="">
+
+                                    <ul>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                    </ul>
+
+                                    <h4 class="pop-title">Broccoli</h4>
+                                    <p class="pric"><del>$20</del> $12</p>
+                                    <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                                    <div class="pop-card-tag-2">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pop-card">
+                                    <img src="img/product-4.jpg" alt="">
+
+                                    <ul>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="fas fa-star gold"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                        <li><i class="far fa-star silv"></i></li>
+                                    </ul>
+
+                                    <h4 class="pop-title">Strawberries</h4>
+                                    <p class="pric"><del>$30</del> $20</p>
+                                    <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                                    <div class="pop-card-tag-2">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="next-part">
+                            <li><a href="javascript:voied(0);">1</a></li>
+                            <li><a href="javascript:voied(0);">2</a></li>
+                            <li><a href="javascript:voied(0);">3</a></li>
+                            <li><a href="javascript:voied(0);"><i class="fas fa-arrow-right"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- testimonial -->
+
+    <section class="testimonial">
+        <div class="container">
+            <div class="text-center mr-bt">
+                <p class="section-lead">Testimonials</p>
+                <h2 class="section-title">What Our Customers Saying</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testi-card">
+                        <img src="img/quat.png" alt="">
+                        <p>”Quisquam est, qui dolorem ipsum quia dolor sit
+                            consectetur adipisci velit sed quia non numqua
+                            eius modi tempora incidunt ut labore et dolore
+                            magnam aliquam quaerat voluptatem repudia
+                            sint et molestiae”</p>
+                        <ul>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                        </ul>
+                        <h4 class="test-title">Alina Parker <span>Ceo, GTD</span></h4>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testi-card">
+                        <img src="img/quat.png" alt="">
+                        <p>”Quisquam est, qui dolorem ipsum quia dolor sit
+                            consectetur adipisci velit sed quia non numqua
+                            eius modi tempora incidunt ut labore et dolore
+                            magnam aliquam quaerat voluptatem repudia
+                            sint et molestiae”</p>
+                        <ul>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                        </ul>
+                        <h4 class="test-title">Alina Parker <span>Ceo, GTD</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="brand">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="br-img">
+                            <img src="img/brand-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="br-img">
+                            <img src="img/brand-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="br-img">
+                            <img src="img/brand-3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="br-img">
+                            <img src="img/brand-4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- subscribe -->
+
+    <section class="subscribe">
+        <div class="container">
+            <div class="mail">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <div class="bsk-img">
+                            <img src="img/basket.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="subs-here">
+                            <h2 class="section-title t-w">Subscribe To Newsletter</h2>
+                            <div class="mail-ara">
+                                <form action="#">
+                                    <input type="email" name="mail" placeholder="Enter Your Email Address">
+                                </form>
+                                <div class="bat-rel">
+                                    <button type="button" class="btn btn-subs">Subscribe Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-text">
+                        <h5 class="footer-title">Store Location</h5>
+                        <p class="adrs"><span>Address</span><br>121 King Street Melbourne,3000,
+                            Australia</p>
+                        <p class="adrs"><span>Email:</span> <br> info@groxistore.com</p>
+                        <p class="adrs"><span>Phone:</span> <br> +1 23 45 6789</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-text">
+                        <h5 class="footer-title">Useful Links</h5>
+                        <ul class="footer-lik">
+                            <li><a href="javascript:voied(0);">About us</a></li>
+                            <li><a href="javascript:voied(0);">Blog</a></li>
+                            <li><a href="javascript:voied(0);">Check out</a></li>
+                            <li><a href="javascript:voied(0);">Contact</a></li>
+                            <li><a href="javascript:voied(0);">Service</a></li>
+                            <li><a href="javascript:voied(0);">Shop</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-text">
+                        <h5 class="footer-title">Categories</h5>
+                        <ul class="footer-lik">
+                            <li><a href="javascript:voied(0);">Fruits & Vegetables</a></li>
+                            <li><a href="javascript:voied(0);">Dairy Products</a></li>
+                            <li><a href="javascript:voied(0);">Package Foods</a></li>
+                            <li><a href="javascript:voied(0);">Beverage</a></li>
+                            <li><a href="javascript:voied(0);">Health & Wellness</a></li>
+                            <li><a href="javascript:voied(0);">Meat Varieties</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-text">
+                        <h5 class="footer-title">Opening Hours</h5>
+                        <p class="adrs"><span>Monday – Saturday</span>
+                            <br>
+                            12.00 – 14.45</p>
+                        <p class="adrs"><span>Sunday – Thursday</span>
+                            <br>
+                            17.30 – 00.00</p>
+                        <p class="adrs"><span>Friday – Saturday</span>
+                            <br>
+                            17.30 – 00.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-main-part">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copy-text">Copyright 2020, Groxi Store. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cpy-link">
+                            <ul>
+                                <li><span>Follow Us:</span></li>
+                                <li><a href="javascript:voied(0);"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="javascript:voied(0);"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="javascript:voied(0);"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="javascript:voied(0);"><i class="fab fa-pinterest-p"></i></a></li>
+                                <li><a href="javascript:voied(0);"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="loader-content">
+        <img src="img/13-pizza-outline (1).gif" alt="">
+    </div>
+
+
+
+
+    <!-- Javascript -->
+
+    <!-- Jquery Min -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- isotope -->
+
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Bootstrap Min Js -->
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- range -->
+
+    <script src="js/jquery-ui.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#close-btn").click(function () {
+                $("#search-overlay").fadeOut();
+                $("#search-btn").show();
+            });
+            $("#search-btn").click(function () {
+                $("#search-overlay").fadeIn();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.youtube').magnificPopup({
+                disableOn: 700,
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+
+                fixedContentPos: true,
+            });
+        });
+    </script>
+
+    <script>
+        function loader() {
+            document.querySelector('.loader-content').classList.add('fade-out')
+        }
+
+        function fadeout() {
+            setInterval(loader, 3000);
+        }
+        window.onload = fadeout()
+    </script>
+
+    <script>
+        $(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 500,
+                values: [75, 300],
+                slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            });
+            $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+                " - $" + $("#slider-range").slider("values", 1));
+        });
+    </script>
+
+</body>
+
+</html>

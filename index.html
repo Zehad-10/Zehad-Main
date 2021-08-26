@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tag -->
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+
+    <title>Groxi</title>
+
+    <!-- Google Foont -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&family=Jost:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- Bootstrap Main Css -->
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- Font Awsome Min Css -->
+
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- Search Overly Css -->
+
+    <link rel="stylesheet" href="css/overly-search-bar.css">
+
+
+    <!-- Style Min Css -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive Min Css -->
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header-wrap">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 mb-lg-0 mr-a">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html" target="blank">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html" target="blank">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html" target="blank">Pages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html" target="blank">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" target="blank">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="404.html" target="blank">404</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <ul class="d-flex align-items-center fl-1">
+                            <li>
+                                <div class="search-ic">
+                                    <i id="search-btn" class="fas fa-search"></i>
+                                    <div id="search-overlay" class="block">
+                                        <div class="centered">
+                                            <div id='search-box'>
+                                                <i id="close-btn" class="fa fa-times fa-2x"></i>
+                                                <form action='/search' id='search-form' method='get' target='_top'>
+                                                    <input id='search-text' name='q' placeholder='Search' type='text' />
+                                                    <button id='search-button' type='submit'>
+                                                        <span>Search</span>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="user-ic">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cart-ic">
+                                    <button class="btn ofc" type="button" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                                            class="fas fa-shopping-cart"></i></button>
+
+                                    <div class="offcanvas offcanvas-end" aria-labelledby="offcanvasRightLabel"
+                                        tabindex="-1" id="offcanvasRight">
+                                        <div class="offcanvas-header">
+                                            <h6 class="sid-titl">Your Products</h6>
+                                            <button type="button" class="btn-close text-reset"
+                                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <div class="row align-items-center br-bt">
+                                                <div class="col-md-6">
+                                                    <img src="img/product-1.jpg" alt="">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="total">
+                                                        <p>Beef Steak</p>
+                                                        <p>1 × $45.00</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="t-title">Subtotal: <span>$45.00</span></h5>
+                                            <button type="button" class="btn btn-defult">View Cart</button>
+                                            <button type="button" class="btn btn-defult cl-gr">Checkout</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header-main-wrap">
+            <div class="container">
+                <div class="header-text wow fadeInLeft" data-wow-duration="2s" data-wow-delay="5s">
+                    <p class="section-lead">Welcome To Our Grocery Store</p>
+                    <h2 class="header-main-title">Shop Online For
+                        Fresh Grocries</h2>
+                    <p class="hdr-sub">Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+                    <button type="button" class="btn btn-defult">Shop now</button>
+                    <button type="button" class="btn btn-defult cl-gr">Read More</button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- best Collection -->
+
+    <section class="best-collection">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="clct-img">
+                        <div class="row align-items-center">
+                            <div class="col-md-7">
+                                <div class="pad-20">
+                                    <h4 class="clt-title">Get Every
+                                        Vegetable
+                                        You Need</h4>
+                                    <a href="javascript:voied(0);" class="sp-btn">Shop now <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="img-cl-1 im-1">
+                                    <img src="img/abt-1.jpg" alt="abt_1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="clct-img clr-2">
+                        <div class="row align-items-center">
+                            <div class="col-md-7">
+                                <div class="pad-20">
+                                    <h4 class="clt-title">We Have Best
+                                        Beverages
+                                        Collection</h4>
+                                    <a href="javascript:voied(0);" class="sp-btn">Shop now <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="img-cl-1">
+                                    <img src="img/abt-2.jpg" alt="abt_1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="clct-img clr-3">
+                        <div class="row align-items-center">
+                            <div class="col-md-7">
+                                <div class="pad-20">
+                                    <h4 class="clt-title">Beauty
+                                        And Health
+                                        Products</h4>
+                                    <a href="javascript:voied(0);" class="sp-btn">Shop now <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="img-cl-1">
+                                    <img src="img/abt-3.jpg" alt="abt_1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- popular -->
+
+    <section class="popular">
+        <div class="container">
+            <div class="text-center mr-bt">
+                <p class="section-lead">Most Popular</p>
+                <h2 class="section-title">Trending Products</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="pop-card">
+                        <img src="img/product-5.jpg" alt="">
+
+                        <ul>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="far fa-star silv"></i></li>
+                            <li><i class="far fa-star silv"></i></li>
+                        </ul>
+
+                        <h4 class="pop-title">Beef Steak</h4>
+                        <p class="pric"><del>$15</del> $12</p>
+                        <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                        <div class="po-card-tag-1">
+                            <p>Hot</p>
+                        </div>
+
+                        <div class="pop-card-tag-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pop-card">
+                        <img src="img/product-6.jpg" alt="">
+
+                        <ul>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="far fa-star silv"></i></li>
+                            <li><i class="far fa-star silv"></i></li>
+                        </ul>
+
+                        <h4 class="pop-title">Broccoli</h4>
+                        <p class="pric"><del>$20</del> $12</p>
+                        <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                        <div class="pop-card-tag-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pop-card">
+                        <img src="img/product-4.jpg" alt="">
+
+                        <ul>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="far fa-star silv"></i></li>
+                            <li><i class="far fa-star silv"></i></li>
+                        </ul>
+
+                        <h4 class="pop-title">Strawberries</h4>
+                        <p class="pric"><del>$30</del> $20</p>
+                        <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                        <div class="pop-card-tag-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="pop-card">
+                        <img src="img/product-4.jpg" alt="">
+
+                        <ul>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="far fa-star silv"></i></li>
+                            <li><i class="far fa-star silv"></i></li>
+                        </ul>
+
+                        <h4 class="pop-title">Fresh Honey</h4>
+                        <p class="pric"><del>$50</del> $40</p>
+                        <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                        <div class="pop-card-tag-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pop-card">
+                        <img src="img/product-5.jpg" alt="">
+
+                        <ul>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="far fa-star silv"></i></li>
+                            <li><i class="far fa-star silv"></i></li>
+                        </ul>
+
+                        <h4 class="pop-title">Fresh Milk</h4>
+                        <p class="pric"><del>$10</del> $8</p>
+                        <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                        <div class="pop-card-tag-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pop-card">
+                        <img src="img/product-6.jpg" alt="">
+
+                        <ul>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="fas fa-star gold"></i></li>
+                            <li><i class="far fa-star silv"></i></li>
+                            <li><i class="far fa-star silv"></i></li>
+                        </ul>
+
+                        <h4 class="pop-title">Mango Beverages</h4>
+                        <p class="pric"><del>$22</del> $18</p>
+                        <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                        <div class="pop-card-tag-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <div class="pad-40">
+                            <h2 class="bnr-title"><span>50%</span>OFF</h2>
+                            <a href="javascript:voied(0);" class="ban-btn">Shop now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="bnr-sub">Popular and
+                            Trending Products</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bnr-img">
+                            <img src="img/banar.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- about Us -->
+
+    <section class="about-us">
+        <div class="container">
+            <div class="about-text">
+                <p class="section-lead">About Us</p>
+                <h2 class="section-title">We Provide You The
+                    Best Experience</h2>
+                <p class="abt-subs">Neque porro quisquam est aui dolorem iesum ruia dolor
+                    sit amet, consectetur, adipisci velit, sed quia non numua
+                    eius modi tempora incidunt ut labore et dolore magnam
+                    volutatem exercitationem ullam.
+                    <span>
+                        Quis autem vel eum iure reprehenderit aui in ea voluptae
+                        velit esse quam nihil molestiae consequatur, vel illum rui
+                        dolorem eum fugiat quo voluptas.
+                    </span>
+                </p>
+                <button type="button" class="btn btn-defult">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- order here -->
+
+    <section class="order-here">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="order-icon">
+                        <img src="img/icon-1.jpg" alt="">
+                        <h5 class="order-title">Quality Products</h5>
+                        <p>Aui dolorem iesum ruia dolor
+                            sit amet, consectetur, adipisci
+                            eius modi incidunt</p>
+                    </div>
+                    <div class="order-icon">
+                        <img src="img/icon-3.jpg" alt="">
+                        <h5 class="order-title">Fast Delivery</h5>
+                        <p>Aui dolorem iesum ruia dolor
+                            sit amet, consectetur, adipisci
+                            eius modi incidunt</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <img src="img/middle-img-log.jpg" alt="">
+
+                        <button type="button" class="btn btn-defult">Shop now</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="order-icon">
+                        <img src="img/icon-2.jpg" alt="">
+                        <h5 class="order-title">Online Order</h5>
+                        <p>Aui dolorem iesum ruia dolor
+                            sit amet, consectetur, adipisci
+                            eius modi incidunt</p>
+                    </div>
+                    <div class="order-icon">
+                        <img src="img/icon-2.jpg" alt="">
+                        <h5 class="order-title">24/7 Service</h5>
+                        <p>Aui dolorem iesum ruia dolor
+                            sit amet, consectetur, adipisci
+                            eius modi incidunt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Best Seller -->
+
+    <section class="best-seller">
+        <div class="container">
+            <div class="text-center mr-bt">
+                <p class="section-lead">Best Seller</p>
+                <h2 class="section-title">Featured Products</h2>
+            </div>
+
+            <div class="filter-btn text-center">
+                <button data-filter="*" class="fltr-btn-main">All</button>
+                <button data-filter=".cat-1" class="fltr-btn-main">Food</button>
+                <button data-filter=".cat-2" class="fltr-btn-main">Fruits</button>
+                <button data-filter=".cat-3" class="fltr-btn-main">Health</button>
+                <button data-filter=".cat-4" class="fltr-btn-main">Meat</button>
+                <button data-filter=".cat-5" class="fltr-btn-main">Dairy</button>
+            </div>
+
+            <div class="filter-menu-grp">
+                <div class="row">
+                    <div class="col-md-4 item cat-1 cat-2">
+                        <div class="pop-card back-wh">
+                            <img src="img/filter-1.jpg" alt="">
+
+                            <ul>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="far fa-star silv"></i></li>
+                                <li><i class="far fa-star silv"></i></li>
+                            </ul>
+
+                            <h4 class="pop-title">Fresh Bread</h4>
+                            <p class="pric"><del>$15</del> $12</p>
+                            <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                            <div class="po-card-tag-1">
+                                <p>Hot</p>
+                            </div>
+
+                            <div class="pop-card-tag-2">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 item cat-3 cat-4">
+                        <div class="pop-card back-wh">
+                            <img src="img/filter-2.jpg" alt="">
+
+                            <ul>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="far fa-star silv"></i></li>
+                                <li><i class="far fa-star silv"></i></li>
+                            </ul>
+
+                            <h4 class="pop-title">Red Pepper</h4>
+                            <p class="pric"><del>$15</del> $12</p>
+                            <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                            <div class="pop-card-tag-2">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 item cat-5 cat-1 cat-3">
+                        <div class="pop-card back-wh">
+                            <img src="img/filter-3.jpg" alt="">
+
+                            <ul>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="far fa-star silv"></i></li>
+                                <li><i class="far fa-star silv"></i></li>
+                            </ul>
+
+                            <h4 class="pop-title">Orange Beverage</h4>
+                            <p class="pric"><del>$15</del> $12</p>
+                            <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                            <div class="po-card-tag-1">
+                                <p>Hot</p>
+                            </div>
+
+                            <div class="pop-card-tag-2">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 item cat-1 cat-2">
+                        <div class="pop-card back-wh">
+                            <img src="img/filter-4..jpg" alt="">
+
+                            <ul>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="far fa-star silv"></i></li>
+                                <li><i class="far fa-star silv"></i></li>
+                            </ul>
+
+                            <h4 class="pop-title">Dozen Eggs</h4>
+                            <p class="pric"><del>$15</del> $12</p>
+                            <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                            <div class="pop-card-tag-2">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 item cat-3 cat-4">
+                        <div class="pop-card back-wh">
+                            <img src="img/filter-5..jpg" alt="">
+
+                            <ul>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="far fa-star silv"></i></li>
+                                <li><i class="far fa-star silv"></i></li>
+                            </ul>
+
+                            <h4 class="pop-title">Cooking Oil</h4>
+                            <p class="pric"><del>$15</del> $12</p>
+                            <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                            <div class="po-card-tag-1">
+                                <p>Hot</p>
+                            </div>
+
+                            <div class="pop-card-tag-2">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 item cat-5 cat-1 cat-3">
+                        <div class="pop-card back-wh">
+                            <img src="img/filter-6..jpg" alt="">
+
+                            <ul>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="fas fa-star gold"></i></li>
+                                <li><i class="far fa-star silv"></i></li>
+                                <li><i class="far fa-star silv"></i></li>
+                            </ul>
+
+                            <h4 class="pop-title">Body Lotion</h4>
+                            <p class="pric"><del>$15</del> $12</p>
+                            <button type="button" class="btn btn-cart">Add To Cart</button>
+
+                            <div class="pop-card-tag-2">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- testimonial -->
+
+    <section class="testimonial">
+        <div class="container">
+            <div class="text-center mr-bt">
+                <p class="section-lead">Testimonials</p>
+                <h2 class="section-title">What Our Customers Saying</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testi-card">
+                        <img src="img/quat.png" alt="">
+                        <p>”Quisquam est, qui dolorem ipsum quia dolor sit
+                            consectetur adipisci velit sed quia non numqua
+                            eius modi tempora incidunt ut labore et dolore
+                            magnam aliquam quaerat voluptatem repudia
+                            sint et molestiae”</p>
+                        <ul>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                        </ul>
+                        <h4 class="test-title">Alina Parker <span>Ceo, GTD</span></h4>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testi-card">
+                        <img src="img/quat.png" alt="">
+                        <p>”Quisquam est, qui dolorem ipsum quia dolor sit
+                            consectetur adipisci velit sed quia non numqua
+                            eius modi tempora incidunt ut labore et dolore
+                            magnam aliquam quaerat voluptatem repudia
+                            sint et molestiae”</p>
+                        <ul>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                            <li><i class="fas fa-star gl-1"></i></li>
+                        </ul>
+                        <h4 class="test-title">Alina Parker <span>Ceo, GTD</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="brand">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="br-img">
+                            <img src="img/brand-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="br-img">
+                            <img src="img/brand-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="br-img">
+                            <img src="img/brand-3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="br-img">
+                            <img src="img/brand-4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- subscribe -->
+
+    <section class="subscribe">
+        <div class="container">
+            <div class="mail">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <div class="bsk-img">
+                            <img src="img/basket.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="subs-here">
+                            <h2 class="section-title t-w">Subscribe To Newsletter</h2>
+                            <div class="mail-ara">
+                                <form action="#">
+                                    <input type="email" name="mail" placeholder="Enter Your Email Address">
+                                </form>
+                                <div class="bat-rel">
+                                    <button type="button" class="btn btn-subs">Subscribe Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-text">
+                        <h5 class="footer-title">Store Location</h5>
+                        <p class="adrs"><span>Address</span><br>121 King Street Melbourne,3000,
+                            Australia</p>
+                        <p class="adrs"><span>Email:</span> <br> info@groxistore.com</p>
+                        <p class="adrs"><span>Phone:</span> <br> +1 23 45 6789</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-text">
+                        <h5 class="footer-title">Useful Links</h5>
+                        <ul class="footer-lik">
+                            <li><a href="javascript:voied(0);">About us</a></li>
+                            <li><a href="javascript:voied(0);">Blog</a></li>
+                            <li><a href="javascript:voied(0);">Check out</a></li>
+                            <li><a href="javascript:voied(0);">Contact</a></li>
+                            <li><a href="javascript:voied(0);">Service</a></li>
+                            <li><a href="javascript:voied(0);">Shop</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-text">
+                        <h5 class="footer-title">Categories</h5>
+                        <ul class="footer-lik">
+                            <li><a href="javascript:voied(0);">Fruits & Vegetables</a></li>
+                            <li><a href="javascript:voied(0);">Dairy Products</a></li>
+                            <li><a href="javascript:voied(0);">Package Foods</a></li>
+                            <li><a href="javascript:voied(0);">Beverage</a></li>
+                            <li><a href="javascript:voied(0);">Health & Wellness</a></li>
+                            <li><a href="javascript:voied(0);">Meat Varieties</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-text">
+                        <h5 class="footer-title">Opening Hours</h5>
+                        <p class="adrs"><span>Monday – Saturday</span>
+                            <br>
+                            12.00 – 14.45</p>
+                        <p class="adrs"><span>Sunday – Thursday</span>
+                            <br>
+                            17.30 – 00.00</p>
+                        <p class="adrs"><span>Friday – Saturday</span>
+                            <br>
+                            17.30 – 00.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-main-part">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copy-text">Copyright 2020, Groxi Store. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cpy-link">
+                            <ul>
+                                <li><span>Follow Us:</span></li>
+                                <li><a href="javascript:voied(0);"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="javascript:voied(0);"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="javascript:voied(0);"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="javascript:voied(0);"><i class="fab fa-pinterest-p"></i></a></li>
+                                <li><a href="javascript:voied(0);"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="loader-content">
+        <img src="img/13-pizza-outline (1).gif" alt="">
+    </div>
+
+
+
+
+
+
+
+    <!-- Javascript -->
+
+    <!-- Jquery Min -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+
+    <!-- Bootstrap Min Js -->
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Isotope Min JS -->
+
+    <script src="js/isotope.pkgd.min.js"></script>
+
+    <script>
+        var $grid = $('.filter-menu-grp').isotope({
+            itemSelector: '.item',
+            layoutMode: 'fitRows',
+        });
+        // filter items on button click
+        $('.filter-btn').on('click', 'button', function () {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({
+                filter: filterValue,
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#close-btn").click(function () {
+                $("#search-overlay").fadeOut();
+                $("#search-btn").show();
+            });
+            $("#search-btn").click(function () {
+                $("#search-overlay").fadeIn();
+            });
+        });
+    </script>
+
+    <script>
+        function loader() {
+            document.querySelector('.loader-content').classList.add('fade-out')
+        }
+
+        function fadeout() {
+            setInterval(loader, 3000);
+        }
+        window.onload = fadeout()
+    </script>
+
+</body>
+
+</html>
