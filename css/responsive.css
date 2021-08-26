@@ -349,9 +349,13 @@
 }
 
 @media only screen and (max-width: 375px) {
-.cl-gr {
+    .cl-gr {
     margin-left: 0px;
+   }
+    .pad-20 {
+   padding:10px;
 }
+
     .catagory-sect .s-icon-1 {
         z-index: 999;
         position: absolute;
